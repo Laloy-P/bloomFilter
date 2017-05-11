@@ -42,7 +42,7 @@ h(K) = |M(KA mod 1)| .
 
 La fonction insertValue va calculer les hashCode de la valeur. Ces hashCode seront ensuite utiliser comme indice pour determiné quelles cellules du filtre seront passer à true.
 
-![](schema\insertion.PNG)
+![](schema/insertion.PNG)
 
         private void insertValue (String value){
 
@@ -59,7 +59,7 @@ La fonction insertValue va calculer les hashCode de la valeur. Ces hashCode sero
 
 La fonction contains hache la valeur qu'on lui a passé en paramêtre. Ensuite, elle veriffie que les indices correspondant aux hashCodes, ont des valeurs à true dans le filtre. Si les deux indices sont a true alors il est possible que la valeur soit contenu dans le filtre de bloom sinon il est certain qu'elle n'est pas présente.
 
-![](schema\presence.PNG)
+![](schema/presence.PNG)
  
 
 	    public boolean contains (String value){
@@ -74,7 +74,7 @@ Cas de faux-positif:
 
 "Moon n'est pas dans le filtre mais lorsqu'on teste sa présence, les hashCode renvoient sur des indices de cellule qui sont à true dû à l'insertion d'autres valeurs.
 
-![](schema\faux-positif.PNG)
+![](schema/faux-positif.PNG)
 ## Exercice 6 :
 Il est impossible de supprimer un element de l'ensemble car on ne peut pas déterminer avec exactitude si un elements est bien présent dans l'ensemble. Cela est du la la présence de "faux positifs" dans un filtre de bloom.
 
