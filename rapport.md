@@ -3,7 +3,7 @@
 ## choix des données
 
 Nous avons choisi ici d'utiliser un tableau de booléen pour representer les différents filtres de bloom, ceux-ci presentent l'avantage d'etre suffisament léger en mémoire et de produire un code plus clair a lire. Il reste possible d'adapter le code pour n'utiliser que des bits et aléger encore plus le code.
-De plus la taille du tableau est indépendamment du nombre d'éléments à insérer. 
+De plus la taille du tableau est indépendente du nombre d'éléments à insérer. 
 
 Nous avons pris arbitrairement une taille de 20. Nous pouvons remarquer par la suite que plus le filtre est petit et plus la probabilité d'avoir un faux-positif est grande.
 
